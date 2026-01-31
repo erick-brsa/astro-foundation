@@ -1,17 +1,43 @@
 ---
-
+// Server Only
+const name = 'Erick Alan Briones Sánchez';
+const title = 'Home Page';
 ---
 
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{title}</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<nav>
+			<a href="/">Home Page</a>
+			<a href="/about">About Page</a>
+			<a href="/contact">Contact Page</a>
+		</nav>
+		<h1>{name}</h1>
+
+		<p>Momento actual: { new Date().toLocaleTimeString() }</p>
+		<p id="currentTime"></p>
+
+		<footer>Año 2023</footer>
+
+		<script>
+			// Client Only
+			const currentYear: number = new Date().getFullYear();
+			const currentTime: string = new Date().toLocaleTimeString();
+
+			const footer = document.querySelector('footer') as HTMLElement;
+			const currentTimeParagraph = document.querySelector('#currentTime') as HTMLParagraphElement;
+			
+			
+			footer.innerText = `Current year: ${currentYear}`;
+			currentTimeParagraph.innerText = `Momento actual real: ${currentTime}`;
+		</script>
 	</body>
 </html>
+	
