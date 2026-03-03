@@ -1,3 +1,1 @@
-# Mi primer proyecto en astro
-
-Introducción al framework
+# Mi primer proyecto en Astro
