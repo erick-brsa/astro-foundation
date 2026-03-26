@@ -2,4 +2,4 @@
 
 introducción a Astro
 
-Actualización
+Nueva Actualización
